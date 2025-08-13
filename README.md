@@ -12,12 +12,18 @@ The platform-independent file-system recursive search library, for Go.
 
 - [Introduction](#introduction)
 - [Installation](#installation)
+- [Examples](#examples)
+- [Project Information](#project-information)
+	- [Where to get help](#where-to-get-help)
+	- [Contribution guidelines](#contribution-guidelines)
+	- [Dependencies](#dependencies)
+		- [Development/Example/Testing Dependencies](#developmentexampletesting-dependencies)
+	- [Related projects](#related-projects)
+	- [License](#license)
+
 
 
 ## Introduction
-
-T.B.C.
-recls for Go
 
 **recls** - **rec**ursive **ls** - is a platform-independent recursive file-system search library implemented in C and C++ with a C-API, and a C++ binding. It implemented in several languages: **recls.Go** is the **Go** implementation.
 
@@ -32,20 +38,23 @@ import recls "github.com/synesissoftware/recls.Go"
 ```
 
 
-
 ## Examples
 
 Examples are provided in the ```examples``` directory, along with a markdown description for each. A detailed list TOC of them is provided in [EXAMPLES.md](./EXAMPLES.md).
 
+
 ## Project Information
+
 
 ### Where to get help
 
 [GitHub Page](https://github.com/synesissoftware/recls.Go "GitHub Page")
 
+
 ### Contribution guidelines
 
 Defect reports, feature requests, and pull requests are welcome on https://github.com/synesissoftware/recls.Go.
+
 
 ### Dependencies
 
@@ -58,7 +67,6 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 * [**CLASP.Go**](https://github.com/synesissoftware/CLASP.Go/);
 * [**STEGoL**](https://github.com/synesissoftware/STEGoL/);
 * [**testify**](https://github.com/stretchr/testify);
-
 
 
 ### Related projects
