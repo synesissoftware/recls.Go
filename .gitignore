@@ -1,24 +1,30 @@
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
+# directories (by name)
 
-# Folders
-_obj
-_test
+/scratch/
 
-# Architecture specific extensions/prefixes
+
+# directories (by pattern)
+
+
+# files (by name)
+
+.DS_Store
+
+
+# files (by pattern)
+
+*~
 *.[568vq]
-[568vq].out
-
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
-
-_testmain.go
-
+*.a
+*.dylib
 *.exe
-*.test
+*.lib
+*.o
+*.out
 *.prof
+*.so
+*.sw[pon]
+*.test
+*.tmp
+*.zip
+

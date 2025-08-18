@@ -1,20 +1,17 @@
-# recls.Go - CHANGES <!-- omit in toc -->
-
-recls for Go
-
-## Table of contents <!-- omit in toc -->
-
-- [Section-1](#section-1)
-- [Section-2](#section-2)
+# **recls.Go** - CHANGES <!-- omit in toc -->
 
 
-## Section-1
+## 0.0.0.4 - 18th August 2025
 
-T.B.C.
+* GitHub Actions;
+* boilerplate;
+* documentation;
 
 
-## Section-2
+## 0.0.0.3 - 13th August 2025
 
-T.B.C.
+* boilerplate;
 
+
+<!-- ########################### end of file ########################### -->
 
