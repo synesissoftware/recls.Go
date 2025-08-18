@@ -1,10 +1,11 @@
 # recls.Go - README <!-- omit in toc -->
 
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 [![GitHub release](https://img.shields.io/github/v/release/synesissoftware/recls.Go.svg)](https://github.com/synesissoftware/recls.Go/releases/latest)
-[![Go Reference](https://pkg.go.dev/badge/github.com/synesissoftware/recls.Go.svg)](https://pkg.go.dev/github.com/synesissoftware/recls.Go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/synesissoftware/recls.Go)](https://goreportcard.com/report/github.com/synesissoftware/recls.Go)
 [![Last Commit](https://img.shields.io/github/last-commit/synesissoftware/recls.Go)](https://github.com/synesissoftware/recls.Go/commits/master)
+[![Go](https://github.com/synesissoftware/recls.Go/actions/workflows/go.yml/badge.svg)](https://github.com/synesissoftware/recls.Go/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/synesissoftware/recls.Go)](https://goreportcard.com/report/github.com/synesissoftware/recls.Go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/synesissoftware/recls.Go.svg)](https://pkg.go.dev/github.com/synesissoftware/recls.Go)
 
 The platform-independent file-system recursive search library, for Go.
 
