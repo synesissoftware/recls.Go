@@ -1,16 +1,18 @@
 package recls
 
 import (
-	"testing"
+	. "github.com/synesissoftware/recls.Go"
 
 	"github.com/stretchr/testify/require"
+
+	"testing"
 )
 
 const (
 	Expected_VersionMajor uint16 = 0
 	Expected_VersionMinor uint16 = 0
 	Expected_VersionPatch uint16 = 0
-	Expected_VersionAB    uint16 = 4
+	Expected_VersionAB    uint16 = 5
 )
 
 func Test_Version_Elements(t *testing.T) {
@@ -21,7 +23,7 @@ func Test_Version_Elements(t *testing.T) {
 }
 
 func Test_Version(t *testing.T) {
-	require.Equal(t, uint64(4), Version)
+	require.Equal(t, uint64(5), Version)
 }
 
 func Test_Version_String(t *testing.T) {
