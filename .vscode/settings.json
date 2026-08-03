@@ -19,17 +19,17 @@
 	"editor.tabSize": 2,
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
-  "go.formatFlags": [
-  ],
-  "go.formatTool": "goimports",
-  "go.lintFlags": [
-    "--fast"
-  ],
-  "go.lintOnSave": "workspace",
-  "go.lintTool": "golangci-lint",
+	"go.formatFlags": [
+	],
+	"go.formatTool": "goimports",
+	"go.lintFlags": [
+		"--fast",
+	],
+	"go.lintOnSave": "workspace",
+	"go.lintTool": "golangci-lint",
 	"go.useLanguageServer": true,
 	"gopls": {
+		"ui.completion.usePlaceholders": true,
 		"ui.semanticTokens": true,
-		"ui.completion.usePlaceholders": true
 	},
 }
