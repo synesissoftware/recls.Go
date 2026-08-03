@@ -1,4 +1,4 @@
-# recls.Go Examples
+# recls.Go - Examples <!-- omit in toc -->
 
 | Name | Source & Description | Summary |
 | ---- | -------------------- | ------- |
