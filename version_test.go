@@ -1,7 +1,7 @@
-package recls
+package recls_test
 
 import (
-	. "github.com/synesissoftware/recls.Go"
+	recls "github.com/synesissoftware/recls.Go"
 
 	"github.com/stretchr/testify/require"
 
@@ -16,16 +16,16 @@ const (
 )
 
 func Test_Version_Elements(t *testing.T) {
-	require.Equal(t, Expected_VersionMajor, VersionMajor)
-	require.Equal(t, Expected_VersionMinor, VersionMinor)
-	require.Equal(t, Expected_VersionPatch, VersionPatch)
-	require.Equal(t, Expected_VersionAB, VersionAB)
+	require.Equal(t, Expected_VersionMajor, recls.VersionMajor)
+	require.Equal(t, Expected_VersionMinor, recls.VersionMinor)
+	require.Equal(t, Expected_VersionPatch, recls.VersionPatch)
+	require.Equal(t, Expected_VersionAB, recls.VersionAB)
 }
 
 func Test_Version(t *testing.T) {
-	require.Equal(t, uint64(5), Version)
+	require.Equal(t, uint64(5), recls.Version)
 }
 
 func Test_Version_String(t *testing.T) {
-	require.Equal(t, "0.0.0", VersionString())
+	require.Equal(t, "0.0.0", recls.VersionString())
 }
