@@ -1,9 +1,9 @@
 # recls.Go - Examples <!-- omit in toc -->
 
-| Name | Source & Description | Summary |
-| ---- | -------------------- | ------- |
-| **libver** | [examples/libver.go](./examples/libver.go) | Displays the **recls.Go** library version and terminates |
+
+| Name       | Source & Description                     | Summary                                                  |
+| ---------- | ---------------------------------------- | -------------------------------------------------------- |
+| **libver** | [examples/libver.go](./examples/libver.go)<br/>[examples/libver.md](./examples/libver.md) | Displays the **recls.Go** library version and terminates |
 
 
 <!-- ########################### end of file ########################### -->
-
