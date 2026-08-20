@@ -8,6 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("recls v%s\n", ver2go.CalcVersionString(recls.VersionMajor, recls.VersionMinor, recls.VersionPatch, recls.VersionAB))
-	fmt.Printf("ver2go v%s\n", ver2go.CalcVersionString(ver2go.VersionMajor, ver2go.VersionMinor, ver2go.VersionPatch, ver2go.VersionAB))
+	fmt.Printf("recls v%s\n", recls.VersionString())
+	fmt.Printf("ver2go v%s\n", ver2go.VersionString())
 }
