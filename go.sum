@@ -1,5 +1,9 @@
 github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
 github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=
+github.com/synesissoftware/ANGoLS v0.11.0 h1:/XFXs6DqnQTxrsUBUz6FuKRC0eq5cpGnWMpTGwH2HnA=
+github.com/synesissoftware/ANGoLS v0.11.0/go.mod h1:F0ewcL/0BxYXtMuBFn5l+FYK365nBHy1copCgASlPkQ=
+github.com/synesissoftware/libpath.Go v0.0.2 h1:/oiQJwE0kqAfvevsiaQedMXrtAihSdwo6lC688ZYpVo=
+github.com/synesissoftware/libpath.Go v0.0.2/go.mod h1:SSfdanLz4RBHjUzwAdh+yTtULu6+s6kaPDgd1EMOEp8=
 github.com/synesissoftware/ver2go v0.2.0 h1:pya2BVE9qXgF3p5M3NgibVih2/iZ7osTBwZZzM1Ho6k=
 github.com/synesissoftware/ver2go v0.2.0/go.mod h1:JlZS4ms4D4cCaYuRh+fbBaNv7BwqrAP4m4/hZzGJ8hU=
 go.yaml.in/yaml/v3 v3.0.5 h1:N6y/pJk8buWs9NY5ERU2HSMfm+IuD/OtfdAnq6kESPw=
