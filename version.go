@@ -5,7 +5,7 @@ import "github.com/synesissoftware/ver2go"
 const (
 	VersionMajor uint16 = 0
 	VersionMinor uint16 = 0
-	VersionPatch uint16 = 1
+	VersionPatch uint16 = 2
 	VersionAB    uint16 = ver2go.Release
 )
 

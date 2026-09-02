@@ -1,6 +1,11 @@
 # recls.Go - Changes <!-- omit in toc -->
 
 
+## 0.0.2 - 2nd September 2026
+
+* updated dependencies;
+
+
 ## 0.0.1 - 20th August 2026
 
 * added **Version()** (replacing the **Version** constant), formed by **ver2go.CombineVersion()**;

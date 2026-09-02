@@ -35,7 +35,6 @@ The platform-independent file-system recursive search library, for Go.
 ## Installation
 
 ```Go
-
 import recls "github.com/synesissoftware/recls.Go"
 ```
 
@@ -61,6 +60,7 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 ### Dependencies
 
 * [**libpath.Go**](https://github.com/synesissoftware/libpath.Go/);
+* [**shwild.Go**](https://github.com/synesissoftware/shwild.Go/);
 * [**ver2go**](https://github.com/synesissoftware/ver2go/);
 
 
