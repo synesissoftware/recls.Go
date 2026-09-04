@@ -4,12 +4,14 @@
 
 /*
  * Created: 3rd September 2026
- * Updated: 3rd September 2026
+ * Updated: 4th September 2026
  */
 
 package recls
 
 import (
+	"github.com/synesissoftware/recls.Go/internal"
+
 	libpath_common "github.com/synesissoftware/libpath.Go/parse/common"
 
 	"io/fs"
@@ -112,4 +114,17 @@ func (e Entry) Sys() any {
 // Underlying os.FileInfo when Exists(); otherwise nil.
 func (e Entry) FileInfo() os.FileInfo {
 	return e.fileInfo
+}
+
+// Hard-link count for the entry. Returns 0 when metadata is unavailable or
+// the platform could not obtain the count. On Unix, directories normally
+// report at least 2 (`.` and `..`); a regular file with a single name
+// reports 1.
+func (e Entry) LinkCount() uint64 {
+	n, ok := internal.LinkCount(e.Path(), e.fileInfo)
+	if !ok {
+		return 0
+	} else {
+		return n
+	}
 }

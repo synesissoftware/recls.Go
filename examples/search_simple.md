@@ -20,5 +20,4 @@ go run ./examples/search_simple /tmp '*.go'
 ```
 
 
-
 <!-- ########################### end of file ########################### -->

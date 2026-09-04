@@ -30,7 +30,6 @@ The platform-independent file-system recursive search library, for Go.
   - [License](#license)
 
 
-
 ## Introduction
 
 **recls** — **rec**ursive **ls** — is a platform-independent recursive
@@ -158,7 +157,6 @@ https://github.com/synesissoftware/recls.Go.
 
 **recls.Go** is released under the 3-clause BSD license. See [LICENSE](./LICENSE)
 for details.
-
 
 
 <!-- ########################### end of file ########################### -->

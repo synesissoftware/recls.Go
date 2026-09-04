@@ -8,16 +8,17 @@
 - [Packaging improvements](#packaging-improvements)
 
 
-
 ## Functional improvements
 
 * [ ] BFS search order (recls.NET-style);
 * [ ] `RemoveDirectory` helper;
 * [ ] Devices / sockets type filters;
-* [ ] Link count / node index metadata;
+* [x] ~~~Link count metadata~~~ - ✅ (`Entry.LinkCount`);
+* [ ] Node index metadata;
 * [ ] FTP search (`RECLS_F_PASSIVE_FTP`);
 * [ ] CalcChecksum;
 * [ ] Windows `AllowReparseDirs` edge cases;
+* [ ] Windows file attributes (system, archive, compressed, …) via a Windows-only interface (`//go:build windows`); wire into **rls** example attribute letters (S/T/V/A/E/C per Ruby **rls**);
 * [ ] Public path helpers (`CombinePaths`, `DeriveRelativePath`, `CanonicalisePath`) — currently internal / stdlib;
 * [ ] Upstream `derive_relative_path` / trailing-separator helpers into **libpath.Go** (recls currently carries thin internal copies);
 * [ ] Upstream path compare / case-fold helpers into **libpath.Go** (Ruby has `make_compare_path`; use for Windows-aware `pathElementsEqual`);
@@ -37,7 +38,6 @@
 
 * [ ] Align **NEWS.md** Details column with umbrella packaging programme;
 * [x] ~~~Drop local `replace` directives once published dependency versions cover CI~~~ - ✅;
-
 
 
 <!-- ########################### end of file ########################### -->

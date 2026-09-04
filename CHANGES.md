@@ -9,7 +9,9 @@
 * Path fields from **libpath.Go** `PathDescriptor`; patterns via **shwild.Go**;
 * Core search flags: type filter, recursive, hidden, access failure, symlinks,
   infinite-loop guard, mark-dirs, details-later, tilde-on-empty-root;
-* Unit and component tests; examples **libver**, **search_simple**, **stat**;
+* Unit and component tests; examples **hard_links**, **libver**, **rls**,
+  **search_simple**, **stat**;
+* **Entry.LinkCount** (Unix `Stat_t.Nlink`; Windows `BY_HANDLE_FILE_INFORMATION`);
 * Migrated version API to **ver2go** 0.2+; CI matrix and lint job;
 
 
