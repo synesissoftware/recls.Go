@@ -74,8 +74,10 @@ e, err := recls.Stat(path, recls.DirectoryParts|recls.MarkDirs)
 ### Search
 
 Depth-first recursive search. Patterns are matched against the **entry
-basename** via **shwild**; multi-patterns may be separated by `|` or the
-platform path-list separator (`:` on Unix, `;` on Windows).
+basename** via **shwild**. `patterns` is a **`PatternSource`**: either a
+multi-pattern string (split on `|` or the platform path-list separator —
+`:` on Unix, `;` on Windows) or a `[]string` of discrete patterns (not
+re-split).
 
 ```go
 opts := recls.SearchOptions{Flags: recls.Files | recls.Recursive}
@@ -85,10 +87,15 @@ for e, err := range recls.Search(root, "*.go", opts) {
 }
 ```
 
-Or callback style:
+Or callback style, with a string or a slice:
 
 ```go
 err := recls.SearchFunc(root, "*.go|*.md", opts, func(e recls.Entry) error {
+    fmt.Println(e.Path())
+    return nil
+})
+
+err = recls.SearchFunc(root, []string{"*.go", "*.md"}, opts, func(e recls.Entry) error {
     fmt.Println(e.Path())
     return nil
 })

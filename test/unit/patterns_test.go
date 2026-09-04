@@ -48,6 +48,21 @@ func Test_SplitPatterns_Dedup(t *testing.T) {
 	require.Equal(t, []string{"*.go"}, internal.SplitPatterns("*.go|*.go", ":"))
 }
 
+func Test_NormalisePatterns_STRING(t *testing.T) {
+	require.Equal(t, []string{"*.go", "*.md"}, internal.NormalisePatterns("*.go|*.md", ":"))
+	require.Equal(t, []string{"*"}, internal.NormalisePatterns("", ":"))
+}
+
+func Test_NormalisePatterns_SLICE(t *testing.T) {
+	require.Equal(t, []string{"*"}, internal.NormalisePatterns([]string{}, ":"))
+	require.Equal(t, []string{"*"}, internal.NormalisePatterns([]string{"", "  "}, ":"))
+	require.Equal(t, []string{"*.go", "*.md"}, internal.NormalisePatterns([]string{"*.go", "*.md"}, ":"))
+	require.Equal(t, []string{"*.go"}, internal.NormalisePatterns([]string{"*.go", "*.go"}, ":"))
+	// Slice elements are discrete: '|' / ':' inside an element are not split.
+	require.Equal(t, []string{"*.go|*.md"}, internal.NormalisePatterns([]string{"*.go|*.md"}, ":"))
+	require.Equal(t, []string{"a:b"}, internal.NormalisePatterns([]string{"a:b"}, ":"))
+}
+
 func Test_CompileAndMatch_EntryName(t *testing.T) {
 	cp, err := internal.CompilePatterns([]string{"*.txt", "readme"})
 	require.NoError(t, err)

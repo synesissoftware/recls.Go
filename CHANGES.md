@@ -5,6 +5,7 @@
 
 * First functional file-system search release (recls2-shaped);
 * Added **Entry**, **Stat**, **Search** / **SearchFunc** (DFS, `iter.Seq2`);
+* **Search** / **SearchFunc** accept **`PatternSource`** (`string | []string`);
 * Path fields from **libpath.Go** `PathDescriptor`; patterns via **shwild.Go**;
 * Core search flags: type filter, recursive, hidden, access failure, symlinks,
   infinite-loop guard, mark-dirs, details-later, tilde-on-empty-root;

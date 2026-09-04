@@ -26,10 +26,10 @@ func makeTree(t *testing.T) string {
 	return root
 }
 
-func collect(
+func collect[P recls.PatternSource](
 	t *testing.T,
 	root string,
-	patterns string,
+	patterns P,
 	opts recls.SearchOptions,
 ) []recls.Entry {
 
@@ -55,6 +55,12 @@ func Test_Search_NON_RECURSIVE_PATTERN(t *testing.T) {
 	root := makeTree(t)
 	got := collect(t, root, "*.txt", recls.SearchOptions{})
 	require.Equal(t, []string{"a.txt"}, names(got))
+}
+
+func Test_Search_PATTERN_SLICE(t *testing.T) {
+	root := makeTree(t)
+	got := collect(t, root, []string{"*.txt", "*.go"}, recls.SearchOptions{})
+	require.ElementsMatch(t, []string{"a.txt", "b.go"}, names(got))
 }
 
 func Test_Search_Recursive_PATTERN(t *testing.T) {

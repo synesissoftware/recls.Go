@@ -4,7 +4,7 @@
 
 /*
  * Created: 3rd September 2026
- * Updated: 3rd September 2026
+ * Updated: 4th September 2026
  */
 
 package recls
@@ -19,17 +19,24 @@ import (
 	"path/filepath"
 )
 
+// Accepted by Search and SearchFunc: either a multi-pattern string (split
+// on '|' and the platform path-list separator) or a slice of discrete
+// pattern strings (not re-split). Empty string or empty/blank-only slice
+// matches all names ("*"). Matching is against the entry basename via
+// shwild, not filepath.Match.
+type PatternSource interface {
+	string | []string
+}
+
 // Returns a depth-first sequence of matching entries under root.
 //
 // Parameters:
 //   - root — the root directory to search;
-//   - patterns — a '|'- or path-list-separator-delimited multi-pattern
-//     string; empty patterns match all names ("*"); matching is against
-//     the entry basename via shwild, not filepath.Match;
+//   - patterns — a PatternSource (string or []string; see PatternSource);
 //   - opts — options that moderate the search;
-func Search(
+func Search[P PatternSource](
 	root string,
-	patterns string,
+	patterns P,
 	opts SearchOptions,
 ) iter.Seq2[Entry, error] {
 
@@ -54,12 +61,12 @@ var errStopIteration = errors.New("recls: stop iteration")
 //
 // Parameters:
 //   - root — the root directory to search;
-//   - patterns — multi-pattern string (see Search);
+//   - patterns — a PatternSource (string or []string; see PatternSource);
 //   - opts — options that moderate the search;
 //   - fn — callback invoked for each matching entry;
-func SearchFunc(
+func SearchFunc[P PatternSource](
 	root string,
-	patterns string,
+	patterns P,
 	opts SearchOptions,
 	fn func(Entry) error,
 ) error {
@@ -75,7 +82,7 @@ func SearchFunc(
 		return err
 	}
 
-	rawPatterns := internal.SplitPatterns(patterns, PathSeparator)
+	rawPatterns := internal.NormalisePatterns(patterns, PathSeparator)
 	if err := internal.ValidatePatternsForFlags(rawPatterns, 0 != (flags&Recursive)); err != nil {
 		return ErrDotRecursiveSearch
 	}

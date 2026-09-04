@@ -23,12 +23,13 @@
 * [ ] Upstream path compare / case-fold helpers into **libpath.Go** (Ruby has `make_compare_path`; use for Windows-aware `pathElementsEqual`);
 * [ ] `DirProgress` example and richer progress API;
 * [ ] Consider **recls.NET**-style callbacks to filter / decide fate of inaccessible directories (beyond binary StopOnAccessFailure vs skip);
-* [ ] Consider generics so `patterns` may be a `string` or an array of strings;
+* [x] ~~~Consider generics so `patterns` may be a `string` or an array of strings~~~ - ✅ (`PatternSource`);
 
 
 ## Performance improvements
 
 * [ ] Consider caching compiled patterns across multi-root searches;
+* [ ] Optimise patterns: if a wildcards-all (`*`) is present, elide all other patterns;
 * [ ] Optional read-ahead / buffered directory reads for large trees;
 
 
