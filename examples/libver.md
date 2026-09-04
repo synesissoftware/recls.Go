@@ -3,19 +3,20 @@
 
 ## Summary
 
-Displays the **recls.Go** library version and terminates.
+Prints the **recls.Go** and **ver2go** version strings.
 
 
 ## Source
 
-See [examples/libver.go](./examples/libver.go).
+* [examples/libver/main.go](./libver/main.go)
 
 
 ## Execution
 
 ```bash
-go run ./examples/libver.go
+go run ./examples/libver
 ```
+
 
 
 <!-- ########################### end of file ########################### -->

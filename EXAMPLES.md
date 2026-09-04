@@ -1,9 +1,12 @@
 # recls.Go - Examples <!-- omit in toc -->
 
 
-| Name       | Source & Description                     | Summary                                                  |
-| ---------- | ---------------------------------------- | -------------------------------------------------------- |
-| **libver** | [examples/libver.go](./examples/libver.go)<br/>[examples/libver.md](./examples/libver.md) | Displays the **recls.Go** library version and terminates |
+| Name             | Source & Description                                                                                         | Details                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| **libver**       | [examples/libver/main.go](./examples/libver/main.go)<br/>[examples/libver.md](./examples/libver.md)             | Prints **recls.Go** and **ver2go** version strings   |
+| **search_simple**| [examples/search_simple/main.go](./examples/search_simple/main.go)<br/>[examples/search_simple.md](./examples/search_simple.md) | Recursive file search with an optional pattern       |
+| **stat**         | [examples/stat/main.go](./examples/stat/main.go)<br/>[examples/stat.md](./examples/stat.md)                     | `Stat` on a file or directory path                   |
+
 
 
 <!-- ########################### end of file ########################### -->
