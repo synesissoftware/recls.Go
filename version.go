@@ -1,12 +1,21 @@
+// Copyright 2019-2026, Matthew Wilson and Synesis Information Systems. All
+// rights reserved. Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
+/*
+ * Created: 19th August 2025
+ * Updated: 4th September 2026
+ */
+
 package recls
 
 import "github.com/synesissoftware/ver2go"
 
 const (
 	VersionMajor uint16 = 0
-	VersionMinor uint16 = 0
-	VersionPatch uint16 = 2
-	VersionAB    uint16 = ver2go.Release
+	VersionMinor uint16 = 1
+	VersionPatch uint16 = 0
+	VersionAB    uint16 = ver2go.Alpha1
 )
 
 var (
@@ -14,19 +23,18 @@ var (
 	versionString string = ver2go.CalcVersionString(VersionMajor, VersionMinor, VersionPatch, VersionAB)
 )
 
-// Version returns this library's version as a packed 64-bit integer, formed
-// by ver2go.CombineVersion from VersionMajor, VersionMinor, VersionPatch,
-// and VersionAB. The result is suitable for numeric comparison: a later
-// release has a strictly greater value than an earlier one that uses the
-// same packing.
+// Returns this library's version as a packed 64-bit integer, formed by
+// ver2go.CombineVersion from VersionMajor, VersionMinor, VersionPatch, and
+// VersionAB. Suitable for numeric comparison: a later release has a
+// strictly greater value than an earlier one that uses the same packing.
 func Version() uint64 {
 	return version
 }
 
-// VersionString returns this library's version as a human-readable string,
-// formed by ver2go.CalcVersionString from VersionMajor, VersionMinor,
-// VersionPatch, and VersionAB. For a final (non-prerelease) version the
-// result is of the form "MAJOR.MINOR.PATCH", e.g. "0.0.1".
+// Returns this library's version as a human-readable string, formed by
+// ver2go.CalcVersionString from VersionMajor, VersionMinor, VersionPatch,
+// and VersionAB. For a final (non-prerelease) version the result is of the
+// form "MAJOR.MINOR.PATCH", e.g. "0.1.0".
 func VersionString() string {
 	return versionString
 }

@@ -1,28 +1,24 @@
 # recls.Go - Changes <!-- omit in toc -->
 
 
+## 0.1.0-alpha1 - 3rd September 2026
+
+* First functional file-system search release (recls2-shaped);
+* Added **Entry**, **Stat**, **Search** / **SearchFunc** (DFS, `iter.Seq2`);
+* **Search** / **SearchFunc** accept **`PatternSource`** (`string | []string`);
+* Path fields from **libpath.Go** `PathDescriptor`; patterns via **shwild.Go**;
+* Core search flags: type filter, recursive, hidden, access failure, symlinks,
+  infinite-loop guard, mark-dirs, details-later, tilde-on-empty-root;
+* Unit and component tests; examples **hard_links**, **libver**, **rls**,
+  **search_simple**, **stat**;
+* **Entry.LinkCount** (Unix `Stat_t.Nlink`; Windows `BY_HANDLE_FILE_INFORMATION`);
+* Migrated version API to **ver2go** 0.2+; CI matrix and lint job;
+
+
 ## 0.0.2 - 2nd September 2026
 
-* updated dependencies;
-
-
-## 0.0.1 - 20th August 2026
-
-* added **Version()** (replacing the **Version** constant), formed by **ver2go.CombineVersion()**;
-* documented **VersionString()**;
-* **VersionAB** now uses **ver2go.Release**;
-* updated **ver2go** to 0.2.0-beta1;
-* updated **examples/libver.go** to use **VersionString()**;
-* version string updated for the 0.0.1 release;
-
-
-## 0.0.0.5 - 20th August 2026
-
-* CI modernisation (matrix + lint);
-* CI reliability fixes (macOS test linking; golangci-lint config verification disabled in CI);
-* boilerplate additions (scripts, markdown docs, project identity);
-* removed retired Go Report Card badge from README;
-* version string updated for the 0.0.0.5 release;
+* Version API migrated toward **ver2go** 0.2 facilities;
+* Boilerplate / helper-script updates;
 
 
 ## 0.0.0.4 - 18th August 2025
