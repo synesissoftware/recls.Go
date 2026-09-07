@@ -18,6 +18,7 @@
 * [ ] FTP search (`RECLS_F_PASSIVE_FTP`);
 * [ ] CalcChecksum;
 * [ ] Windows `AllowReparseDirs` edge cases;
+* [ ] Windows flag so leading-dot names are not treated as hidden (apply in `ProbeHidden` / `IsHiddenName`; Unix-style `.name` convention becomes optional on Windows);
 * [ ] Windows file attributes (system, archive, compressed, …) via a Windows-only interface (`//go:build windows`); wire into **rls** example attribute letters (S/T/V/A/E/C per Ruby **rls**);
 * [ ] Public path helpers (`CombinePaths`, `DeriveRelativePath`, `CanonicalisePath`) — currently internal / stdlib;
 * [ ] Upstream `derive_relative_path` / trailing-separator helpers into **libpath.Go** (recls currently carries thin internal copies);

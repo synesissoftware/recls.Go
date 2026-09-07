@@ -3,7 +3,8 @@
 
 ## Summary
 
-Prints the **recls.Go** and **ver2go** version strings.
+Prints the **recls.Go** version string and those of the dependency
+libraries.
 
 
 ## Source
